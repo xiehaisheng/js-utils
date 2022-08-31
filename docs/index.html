@@ -1,0 +1,32 @@
+<!DOCTYPE html><html class="default"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>@js/utils</title><meta name="description" content="Documentation for @js/utils"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem("tsd-theme") || "os")</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">@js/utils</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label><input type="checkbox" id="tsd-filter-externals" checked/><label class="tsd-widget" for="tsd-filter-externals">Externals</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>@js/utils </h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#开发一个自己的js函数库" id="开发一个自己的js函数库" style="color: inherit; text-decoration: none;">
+  <h1>开发一个自己的JS函数库</h1>
+</a>
+
+<a href="#开发步骤" id="开发步骤" style="color: inherit; text-decoration: none;">
+  <h3>开发步骤</h3>
+</a>
+<ol>
+<li>src/common 目录下，分类型新建 xx.ts，作为编写新方法代码的载体文件，使用驼峰命名；</li>
+<li>编写完后在index.ts 中导出，并执行 npm run build 进行打包；</li>
+<li>打包完后新建该方法测试文件。test 目录下，遵守 xx.test.js 的命名规范，并参考已有示例编写测试代码；</li>
+<li>自测方法是否正确，终端输入 npm run test 命令，如只想单独测试某一个文件则执行 jest -t xx.test.js；</li>
+<li>测试无误后发布，package.json 中修改版本号，执行 npm run release；</li>
+</ol>
+
+<a href="#函数库使用" id="函数库使用" style="color: inherit; text-decoration: none;">
+  <h3>函数库使用</h3>
+</a>
+<pre><code class="language-ts"><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-0">install</span><span class="hl-1"> @</span><span class="hl-0">js</span><span class="hl-1">/</span><span class="hl-0">utils</span><span class="hl-1"> --</span><span class="hl-0">save</span><br/><span class="hl-2">import</span><span class="hl-1"> { </span><span class="hl-0">Url</span><span class="hl-1">, </span><span class="hl-0">Env</span><span class="hl-1"> } </span><span class="hl-2">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@js/utils&#39;</span><span class="hl-1">;</span>
+</code></pre>
+
+<a href="#文档查看" id="文档查看" style="color: inherit; text-decoration: none;">
+  <h3>文档查看</h3>
+</a>
+<ol>
+<li>生成最新文档只需在终端执行 npm run docs；</li>
+<li>执行完此命令后，即生成最新的文档目录-docs；</li>
+<li>查看。项目中找到 docs 目录下的 index.html，在浏览器运行即可查看；</li>
+<li>文档编写规范/方法参考 jsdoc 官方文档 <a href="https://www.shouce.ren/api/view/a/13232%E3%80%82">https://www.shouce.ren/api/view/a/13232。</a></li>
+</ol>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li><li class=" tsd-kind-namespace"><a href="modules/Env.html">Env</a></li><li class=" tsd-kind-namespace"><a href="modules/Url.html">Url</a></li><li class=" tsd-kind-namespace"><a href="modules/Util.html">Util</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
