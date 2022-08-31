@@ -1,7 +1,7 @@
 {
-  "name": "utils-template",
+  "name": "{{ name }}",
   "version": "0.0.1",
-  "description": "js函数工具库",
+  "description": "{{ description }}",
   "main": "dist/bundle.umd.js",
   "module": "dist/bundle.es.js",
   "types": "dist/index.d.ts'",
@@ -13,7 +13,7 @@
     "release": "npm run build && npm run docs && npm publish"
   },
   "keywords": [],
-  "author": "",
+  "author": "{{ author }}",
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-env": "^7.8.4",
